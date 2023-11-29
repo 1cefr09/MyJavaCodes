@@ -9,7 +9,7 @@
 
 
 */
-class LogicTest {
+class  LogicTest {
 	public static void main(String[] args) {
 				
 		/*
