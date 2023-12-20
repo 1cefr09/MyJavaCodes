@@ -4,7 +4,7 @@ package atguigu06.polymorphism.apply;
  * ClassName: AnimalTest
  * Description:
  *
- * @Author å°šç¡…è°·-å®‹çº¢åº·
+ * @Author ÉĞ¹è¹È-ËÎºì¿µ
  * @Create 16:39
  * @Version 1.0
  */
@@ -36,45 +36,45 @@ public class AnimalTest {
 //
 //    }
 
-    //ã€‚ã€‚ã€‚ã€‚
+    //¡£¡£¡£¡£
 
 }
 
 class Animal{
     public void eat(){
-        System.out.println("åŠ¨ç‰©è¿›é£Ÿ");
+        System.out.println("¶¯Îï½øÊ³");
     }
 
     public void jump(){
-        System.out.println("åŠ¨ç‰©è·³");
+        System.out.println("¶¯ÎïÌø");
     }
 }
 
 class Dog extends Animal{
     public void eat(){
-        System.out.println("ç‹—åƒéª¨å¤´");
+        System.out.println("¹·³Ô¹ÇÍ·");
     }
 
     public void jump(){
-        System.out.println("ç‹—æ€¥è·³å¢™");
+        System.out.println("¹·¼±ÌøÇ½");
     }
 
     public void watchDoor(){
-        System.out.println("ç‹—èƒ½çœ‹å®¶");
+        System.out.println("¹·ÄÜ¿´¼Ò");
     }
 }
 
 class Cat extends Animal{
     public void eat(){
-        System.out.println("çŒ«åƒé±¼");
+        System.out.println("Ã¨³ÔÓã");
     }
 
     public void jump(){
-        System.out.println("çŒ«è·³~~");
+        System.out.println("Ã¨Ìø~~");
     }
 
     public void catchMouse(){
-        System.out.println("çŒ«æŠ“è€é¼ ");
+        System.out.println("Ã¨×¥ÀÏÊó");
     }
 }
 

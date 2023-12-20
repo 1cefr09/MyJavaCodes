@@ -1,29 +1,31 @@
 package atguigu02.project.model;
 
 /**
- * @author å°šç¡…è°·-å®‹çº¢åº·
+ * @author ÉĞ¹è¹È-ËÎºì¿µ
  * @create 17:27
  */
 public class CustomerView {
 	private CustomerList customers = new CustomerList(10);
 
 	public CustomerView() {
-		Customer cust = new Customer("å¼ ä¸‰", 'ç”·', 30, "13843255423",
+		Customer cust;
+		cust = new Customer("ÕÅÈı", 'M', 30, "13843255423",
 				"abc@126.com");
 		customers.addCustomer(cust);
 	}
 
 	public void enterMainMenu() {
 		boolean loopFlag = true;
+
 		do {
 			System.out
-					.println("\n-------------------æ‹¼ç”µå•†å®¢æˆ·ç®¡ç†ç³»ç»Ÿ-----------------\n");
-			System.out.println("                   1 æ·» åŠ  å®¢ æˆ·");
-			System.out.println("                   2 ä¿® æ”¹ å®¢ æˆ·");
-			System.out.println("                   3 åˆ  é™¤ å®¢ æˆ·");
-			System.out.println("                   4 å®¢ æˆ· åˆ— è¡¨");
-			System.out.println("                   5 é€€       å‡º\n");
-			System.out.print("                   è¯·é€‰æ‹©(1-5)ï¼š");
+					.println("\n-------------------Æ´µçÉÌ¿Í»§¹ÜÀíÏµÍ³-----------------\n");
+			System.out.println("                   1 Ìí ¼Ó ¿Í »§");
+			System.out.println("                   2 ĞŞ ¸Ä ¿Í »§");
+			System.out.println("                   3 É¾ ³ı ¿Í »§");
+			System.out.println("                   4 ¿Í »§ ÁĞ ±í");
+			System.out.println("                   5 ÍË       ³ö\n");
+			System.out.print("                   ÇëÑ¡Ôñ(1-5)£º");
 
 			char key = CMUtility.readMenuSelection();
 			System.out.println();
@@ -41,7 +43,7 @@ public class CustomerView {
 				listAllCustomers();
 				break;
 			case '5':
-				System.out.print("ç¡®è®¤æ˜¯å¦é€€å‡º(Y/N)ï¼š");
+				System.out.print("È·ÈÏÊÇ·ñÍË³ö(Y/N)£º");
 				char yn = CMUtility.readConfirmSelection();
 				if (yn == 'Y')
 					loopFlag = false;
@@ -51,35 +53,35 @@ public class CustomerView {
 	}
 
 	private void addNewCustomer() {
-		System.out.println("---------------------æ·»åŠ å®¢æˆ·---------------------");
-		System.out.print("å§“åï¼š");
+		System.out.println("---------------------Ìí¼Ó¿Í»§---------------------");
+		System.out.print("ĞÕÃû£º");
 		String name = CMUtility.readString(4);
-		System.out.print("æ€§åˆ«ï¼š");
+		System.out.print("ĞÔ±ğ£º");
 		char gender = CMUtility.readChar();
-		System.out.print("å¹´é¾„ï¼š");
+		System.out.print("ÄêÁä£º");
 		int age = CMUtility.readInt();
-		System.out.print("ç”µè¯ï¼š");
+		System.out.print("µç»°£º");
 		String phone = CMUtility.readString(15);
-		System.out.print("é‚®ç®±ï¼š");
+		System.out.print("ÓÊÏä£º");
 		String email = CMUtility.readString(15);
 
 		Customer cust = new Customer(name, gender, age, phone, email);
 		boolean flag = customers.addCustomer(cust);
 		if (flag) {
 			System.out
-					.println("---------------------æ·»åŠ å®Œæˆ---------------------");
+					.println("---------------------Ìí¼ÓÍê³É---------------------");
 		} else {
-			System.out.println("----------------è®°å½•å·²æ»¡,æ— æ³•æ·»åŠ -----------------");
+			System.out.println("----------------¼ÇÂ¼ÒÑÂú,ÎŞ·¨Ìí¼Ó-----------------");
 		}
 	}
 
 	private void modifyCustomer() {
-		System.out.println("---------------------ä¿®æ”¹å®¢æˆ·---------------------");
+		System.out.println("---------------------ĞŞ¸Ä¿Í»§---------------------");
 
 		int index = 0;
 		Customer cust = null;
 		for (;;) {
-			System.out.print("è¯·é€‰æ‹©å¾…ä¿®æ”¹å®¢æˆ·ç¼–å·(-1é€€å‡º)ï¼š");
+			System.out.print("ÇëÑ¡Ôñ´ıĞŞ¸Ä¿Í»§±àºÅ(-1ÍË³ö)£º");
 			index = CMUtility.readInt();
 			if (index == -1) {
 				return;
@@ -87,24 +89,24 @@ public class CustomerView {
 
 			cust = customers.getCustomer(index - 1);
 			if (cust == null) {
-				System.out.println("æ— æ³•æ‰¾åˆ°æŒ‡å®šå®¢æˆ·ï¼");
+				System.out.println("ÎŞ·¨ÕÒµ½Ö¸¶¨¿Í»§£¡");
 			} else
 				break;
 		}
 
-		System.out.print("å§“å(" + cust.getName() + ")ï¼š");
+		System.out.print("ĞÕÃû(" + cust.getName() + ")£º");
 		String name = CMUtility.readString(4, cust.getName());
 
-		System.out.print("æ€§åˆ«(" + cust.getGender() + ")ï¼š");
+		System.out.print("ĞÔ±ğ(" + cust.getGender() + ")£º");
 		char gender = CMUtility.readChar(cust.getGender());
 
-		System.out.print("å¹´é¾„(" + cust.getAge() + ")ï¼š");
+		System.out.print("ÄêÁä(" + cust.getAge() + ")£º");
 		int age = CMUtility.readInt(cust.getAge());
 
-		System.out.print("ç”µè¯(" + cust.getPhone() + ")ï¼š");
+		System.out.print("µç»°(" + cust.getPhone() + ")£º");
 		String phone = CMUtility.readString(15, cust.getPhone());
 
-		System.out.print("é‚®ç®±(" + cust.getEmail() + ")ï¼š");
+		System.out.print("ÓÊÏä(" + cust.getEmail() + ")£º");
 		String email = CMUtility.readString(15, cust.getEmail());
 
 		cust = new Customer(name, gender, age, phone, email);
@@ -112,19 +114,19 @@ public class CustomerView {
 		boolean flag = customers.replaceCustomer(index - 1, cust);
 		if (flag) {
 			System.out
-					.println("---------------------ä¿®æ”¹å®Œæˆ---------------------");
+					.println("---------------------ĞŞ¸ÄÍê³É---------------------");
 		} else {
-			System.out.println("----------æ— æ³•æ‰¾åˆ°æŒ‡å®šå®¢æˆ·,ä¿®æ”¹å¤±è´¥--------------");
+			System.out.println("----------ÎŞ·¨ÕÒµ½Ö¸¶¨¿Í»§,ĞŞ¸ÄÊ§°Ü--------------");
 		}
 	}
 
 	private void deleteCustomer() {
-		System.out.println("---------------------åˆ é™¤å®¢æˆ·---------------------");
+		System.out.println("---------------------É¾³ı¿Í»§---------------------");
 
 		int index = 0;
 		Customer cust = null;
 		for (;;) {
-			System.out.print("è¯·é€‰æ‹©å¾…åˆ é™¤å®¢æˆ·ç¼–å·(-1é€€å‡º)ï¼š");
+			System.out.print("ÇëÑ¡Ôñ´ıÉ¾³ı¿Í»§±àºÅ(-1ÍË³ö)£º");
 			index = CMUtility.readInt();
 			if (index == -1) {
 				return;
@@ -132,12 +134,12 @@ public class CustomerView {
 
 			cust = customers.getCustomer(index - 1);
 			if (cust == null) {
-				System.out.println("æ— æ³•æ‰¾åˆ°æŒ‡å®šå®¢æˆ·ï¼");
+				System.out.println("ÎŞ·¨ÕÒµ½Ö¸¶¨¿Í»§£¡");
 			} else
 				break;
 		}
 
-		System.out.print("ç¡®è®¤æ˜¯å¦åˆ é™¤(Y/N)ï¼š");
+		System.out.print("È·ÈÏÊÇ·ñÉ¾³ı(Y/N)£º");
 		char yn = CMUtility.readConfirmSelection();
 		if (yn == 'N')
 			return;
@@ -145,26 +147,26 @@ public class CustomerView {
 		boolean flag = customers.deleteCustomer(index - 1);
 		if (flag) {
 			System.out
-					.println("---------------------åˆ é™¤å®Œæˆ---------------------");
+					.println("---------------------É¾³ıÍê³É---------------------");
 		} else {
-			System.out.println("----------æ— æ³•æ‰¾åˆ°æŒ‡å®šå®¢æˆ·,åˆ é™¤å¤±è´¥--------------");
+			System.out.println("----------ÎŞ·¨ÕÒµ½Ö¸¶¨¿Í»§,É¾³ıÊ§°Ü--------------");
 		}
 	}
 
 	private void listAllCustomers() {
-        System.out.println("---------------------------å®¢æˆ·åˆ—è¡¨---------------------------");
+        System.out.println("---------------------------¿Í»§ÁĞ±í---------------------------");
         Customer[] custs = customers.getAllCustomers();
         if (custs.length == 0) {
-            System.out.println("æ²¡æœ‰å®¢æˆ·è®°å½•ï¼");
+            System.out.println("Ã»ÓĞ¿Í»§¼ÇÂ¼£¡");
         } else {
-            System.out.println("ç¼–å·\tå§“å\tæ€§åˆ«\tå¹´é¾„\tç”µè¯\t\t\té‚®ç®±");
+            System.out.println("±àºÅ\tĞÕÃû\tĞÔ±ğ\tÄêÁä\tµç»°\t\t\tÓÊÏä");
             for (int i = 0; i < custs.length; i++) {
 //            System.out.println(i + 1 + "\t" + custs[i].getName() + "\t" + custs[i].getGender() + "\t" + custs[i].getAge() + "\t\t" + custs[i].getPhone() + "\t" + custs[i].getEmail());
             	System.out.println((i+1) + "\t" + custs[i].getDetails());
             }
         }
 
-        System.out.println("-------------------------å®¢æˆ·åˆ—è¡¨å®Œæˆ-------------------------");
+        System.out.println("-------------------------¿Í»§ÁĞ±íÍê³É-------------------------");
     }
 
 	public static void main(String[] args) {

@@ -2,6 +2,10 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Chapter06/src/atguigu01/oop/PhoneTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Chapter07/src/atguigu02/project/model/CustomerView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Chapter07/src/atguigu03/_extends/ExtendsTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Chapter07/src/atguigu06/polymorphism/PersonTest1.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Chapter07/src/atguigu06/polymorphism/apply/AnimalTest.java" charset="GBK" />
     <file url="PROJECT" charset="GBK" />
   </component>
 </project>

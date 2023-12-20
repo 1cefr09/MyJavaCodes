@@ -1,4 +1,6 @@
 
+angle:角
+angel:天使
 
 案例：
 编写两个类，TriAngle和TriAngleTest，其中TriAngle类中声明私有的底边长base和高height，

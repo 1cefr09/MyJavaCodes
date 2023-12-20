@@ -4,7 +4,7 @@ package atguigu03._extends;
  * ClassName: ExtendsTest
  * Description:
  *
- * @Author å°šç¡…è°·-å®‹çº¢åº·
+ * @Author ÉĞ¹è¹È-ËÎºì¿µ
  * @Create 9:09
  * @Version 1.0
  */
@@ -22,9 +22,9 @@ public class ExtendsTest {
 //        s1.age = 12;
         s1.eat();
 
-        //è¶…çº²ï¼šè·å–s1æ‰€å±ç±»çš„çˆ¶ç±»
+        //³¬¸Ù£º»ñÈ¡s1ËùÊôÀàµÄ¸¸Àà
         System.out.println(s1.getClass().getSuperclass());
-        //è¶…çº²ï¼šè·å–p1æ‰€å±ç±»çš„çˆ¶ç±»
+        //³¬¸Ù£º»ñÈ¡p1ËùÊôÀàµÄ¸¸Àà
         System.out.println(p1.getClass().getSuperclass());//java.lang.Object
 
     }

@@ -1,6 +1,6 @@
 package atguigu04.override.test2;
 
-import com.atguigu04.override.test1.Order;
+import atguigu04.override.test1.Order;
 
 /**
  * ClassName: SubOrder

@@ -4,37 +4,37 @@ package atguigu06.polymorphism;
  * ClassName: PersonTest1
  * Description:
  *
- * @Author å°šç¡…è°·-å®‹çº¢åº·
+ * @Author ÉĞ¹è¹È-ËÎºì¿µ
  * @Create 17:03
  * @Version 1.0
  */
 public class PersonTest1 {
     public static void main(String[] args) {
         Person p1 = new Man();
-        //ä¸èƒ½ç›´æ¥è°ƒç”¨å­ç±»ç‰¹æœ‰çš„ç»“æ„
+        //²»ÄÜÖ±½Óµ÷ÓÃ×ÓÀàÌØÓĞµÄ½á¹¹
 //        p1.earnMoney();
 //        System.out.println(p1.isSmoking);
 //
 
-        //å‘ä¸‹è½¬å‹ï¼šä½¿ç”¨å¼ºè½¬ç¬¦ã€‚
+        //ÏòÏÂ×ªĞÍ£ºÊ¹ÓÃÇ¿×ª·û¡£
         Man m1 = (Man)p1;
         m1.earnMoney();
         System.out.println(m1.isSmoking);
 
-        System.out.println(p1 == m1);//true,p1å’Œm1æŒ‡å‘å †ç©ºé—´ä¸­çš„åŒä¸€ä¸ªå¯¹è±¡ã€‚
+        System.out.println(m1 == p1);//true,p1ºÍm1Ö¸Ïò¶Ñ¿Õ¼äÖĞµÄÍ¬Ò»¸ö¶ÔÏó¡£
 
         /*
-        * å‘ä¸‹è½¬å‹å¯èƒ½ä¼šå‡ºç°ï¼šç±»å‹è½¬æ¢å¼‚å¸¸ï¼ˆClassCastExceptionï¼‰
+        * ÏòÏÂ×ªĞÍ¿ÉÄÜ»á³öÏÖ£ºÀàĞÍ×ª»»Òì³££¨ClassCastException£©
         * */
         Person p2 = new Woman();
 //        Man m2 = (Man)p2;
 //        m2.earnMoney();
 
         /*
-        * 1. å»ºè®®åœ¨å‘ä¸‹è½¬å‹ä¹‹å‰ï¼Œä½¿ç”¨instanceofè¿›è¡Œåˆ¤æ–­ï¼Œé¿å…å‡ºç°ç±»å‹è½¬æ¢å¼‚å¸¸
-        * 2. æ ¼å¼ï¼š a instanceOf A : åˆ¤æ–­å¯¹è±¡aæ˜¯å¦æ˜¯ç±»Açš„å®ä¾‹ã€‚
-        * 3. å¦‚æœa instanceOf A è¿”å›trueï¼Œåˆ™ï¼š
-        *       a instanceOf superA è¿”å›ä¹Ÿæ˜¯trueã€‚å…¶ä¸­ï¼ŒA æ˜¯superAçš„å­ç±»ã€‚
+        * 1. ½¨ÒéÔÚÏòÏÂ×ªĞÍÖ®Ç°£¬Ê¹ÓÃinstanceof½øĞĞÅĞ¶Ï£¬±ÜÃâ³öÏÖÀàĞÍ×ª»»Òì³£
+        * 2. ¸ñÊ½£º a instanceOf A : ÅĞ¶Ï¶ÔÏóaÊÇ·ñÊÇÀàAµÄÊµÀı¡£
+        * 3. Èç¹ûa instanceOf A ·µ»Øtrue£¬Ôò£º
+        *       a instanceOf superA ·µ»ØÒ²ÊÇtrue¡£ÆäÖĞ£¬A ÊÇsuperAµÄ×ÓÀà¡£
         * */
         if(p2 instanceof Man){
             Man m2 = (Man)p2;
