@@ -1,4 +1,4 @@
-package com.atguigu5.arrays;
+package atguigu5.arrays;
 
 import java.util.Arrays;
 

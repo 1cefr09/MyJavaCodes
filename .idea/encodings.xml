@@ -6,6 +6,13 @@
     <file url="file://$PROJECT_DIR$/Chapter07/src/atguigu03/_extends/ExtendsTest.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Chapter07/src/atguigu06/polymorphism/PersonTest1.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Chapter07/src/atguigu06/polymorphism/apply/AnimalTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Chapter08/src/atguigu02/singleton/BankTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Chapter08/src/atguigu03/main/MainTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Chapter08/src/atguigu04/block/BlockTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Chapter08/src/atguigu05/field/exer/LeafTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Chapter08/src/atguigu08/_interface/apply/USBTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Chapter08/src/atguigu08/_interface/exer1/EatableTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Chapter08/src/atguigu10/_enum/SeasonTest.java" charset="GBK" />
     <file url="PROJECT" charset="GBK" />
   </component>
 </project>
