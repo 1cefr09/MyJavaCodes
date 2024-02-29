@@ -1,8 +1,8 @@
 package atguigu06.project.team.service;
 
-import com.atguigu06.project.team.domain.*;
+import atguigu06.project.team.domain.*;
 
-import static com.atguigu06.project.team.service.Data.*;
+import static atguigu06.project.team.service.Data.*;
 /**
  * ClassName: NameListService
  * Description:

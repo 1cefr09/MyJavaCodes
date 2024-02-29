@@ -1,6 +1,6 @@
 package atguigu06.project.team.domain;
 
-import com.atguigu06.project.team.service.Status;
+import atguigu06.project.team.service.Status;
 
 /**
  * ClassName: Programmer

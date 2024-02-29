@@ -10,7 +10,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * @author å°šç¡…è°·-å®‹çº¢åº·
+ * @author ÉĞ¹è¹È-ËÎºì¿µ
  * @create 11:50
  */
 public class ExceptionHandleTest {
@@ -23,14 +23,14 @@ public class ExceptionHandleTest {
             System.out.println(num);
 
         }catch(NullPointerException e){
-            System.out.println("å‡ºç°äº†NullPointerExceptionçš„å¼‚å¸¸");
+            System.out.println("³öÏÖÁËNullPointerExceptionµÄÒì³£");
         }catch(InputMismatchException e){
-            System.out.println("å‡ºç°äº†InputMismatchExceptionçš„å¼‚å¸¸");
+            System.out.println("³öÏÖÁËInputMismatchExceptionµÄÒì³£");
         }catch(RuntimeException e){
-            System.out.println("å‡ºç°äº†RuntimeExceptionçš„å¼‚å¸¸");
+            System.out.println("³öÏÖÁËRuntimeExceptionµÄÒì³£");
         }
 
-        System.out.println("å¼‚å¸¸å¤„ç†ç»“æŸï¼Œä»£ç ç»§ç»­æ‰§è¡Œ...");
+        System.out.println("Òì³£´¦Àí½áÊø£¬´úÂë¼ÌĞøÖ´ĞĞ...");
     }
 
 
@@ -44,38 +44,38 @@ public class ExceptionHandleTest {
             System.out.println(i);
         }catch(NumberFormatException e){
             e.printStackTrace();
-            //æˆ–
+            //»ò
 //            System.out.println(e.getMessage());
         }
 
-        System.out.println("ç¨‹åºç»“æŸ");
+        System.out.println("³ÌĞò½áÊø");
 //        System.out.println(str);
 
     }
 
-    //******************ä¸‹é¢æ¥å¤„ç†ç¼–è¯‘æ—¶å¼‚å¸¸***************************
+    //******************ÏÂÃæÀ´´¦Àí±àÒëÊ±Òì³£***************************
     @Test
     public void test3() {
         try{
 
             File file = new File("D:\\hello.txt");
 
-            FileInputStream fis = new FileInputStream(file); //å¯èƒ½æŠ¥FileNotFoundException
+            FileInputStream fis = new FileInputStream(file); //¿ÉÄÜ±¨FileNotFoundException
 
-            int data = fis.read(); //å¯èƒ½æŠ¥IOException
+            int data = fis.read(); //¿ÉÄÜ±¨IOException
             while(data != -1){
                 System.out.print((char)data);
-                data = fis.read(); //å¯èƒ½æŠ¥IOException
+                data = fis.read(); //¿ÉÄÜ±¨IOException
             }
 
-            fis.close(); //å¯èƒ½æŠ¥IOException
+            fis.close(); //¿ÉÄÜ±¨IOException
         }catch(FileNotFoundException e){
             e.printStackTrace();
         }catch(IOException e){
             e.printStackTrace();
         }
 
-        System.out.println("è¯»å–æ•°æ®ç»“æŸ....");
+        System.out.println("¶ÁÈ¡Êı¾İ½áÊø....");
     }
 
 }

@@ -1,9 +1,9 @@
 package atguigu06.project.team.service;
 
-import com.atguigu06.project.team.domain.Architect;
-import com.atguigu06.project.team.domain.Designer;
-import com.atguigu06.project.team.domain.Employee;
-import com.atguigu06.project.team.domain.Programmer;
+import atguigu06.project.team.domain.Architect;
+import atguigu06.project.team.domain.Designer;
+import atguigu06.project.team.domain.Employee;
+import atguigu06.project.team.domain.Programmer;
 
 /**
  * ClassName: TeamService

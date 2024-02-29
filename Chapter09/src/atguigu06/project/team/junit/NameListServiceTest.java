@@ -1,8 +1,8 @@
 package atguigu06.project.team.junit;
 
-import com.atguigu06.project.team.domain.Employee;
-import com.atguigu06.project.team.service.NameListService;
-import com.atguigu06.project.team.service.TeamException;
+import atguigu06.project.team.domain.Employee;
+import atguigu06.project.team.service.NameListService;
+import atguigu06.project.team.service.TeamException;
 import org.junit.Test;
 
 /**
