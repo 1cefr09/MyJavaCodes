@@ -3,33 +3,33 @@ package atguigu05.communication;
 /**
  * ClassName: ProducerConsumerTest
  * Description:
- *      æ¡ˆä¾‹2ï¼šç”Ÿäº§è€…&æ¶ˆè´¹è€…
- *      ç”Ÿäº§è€…(Productor)å°†äº§å“äº¤ç»™åº—å‘˜(Clerk)ï¼Œè€Œæ¶ˆè´¹è€…(Customer)ä»åº—å‘˜å¤„å–èµ°äº§å“ï¼Œåº—å‘˜ä¸€æ¬¡åªèƒ½æŒæœ‰
- *      å›ºå®šæ•°é‡çš„äº§å“(æ¯”å¦‚:20ï¼‰ï¼Œå¦‚æœç”Ÿäº§è€…è¯•å›¾ç”Ÿäº§æ›´å¤šçš„äº§å“ï¼Œåº—å‘˜ä¼šå«ç”Ÿäº§è€…åœä¸€ä¸‹ï¼Œå¦‚æœåº—ä¸­æœ‰ç©ºä½æ”¾äº§å“
- *      äº†å†é€šçŸ¥ç”Ÿäº§è€…ç»§ç»­ç”Ÿäº§ï¼›å¦‚æœåº—ä¸­æ²¡æœ‰äº§å“äº†ï¼Œåº—å‘˜ä¼šå‘Šè¯‰æ¶ˆè´¹è€…ç­‰ä¸€ä¸‹ï¼Œå¦‚æœåº—ä¸­æœ‰äº§å“äº†å†é€šçŸ¥æ¶ˆè´¹è€…æ¥
- *      å–èµ°äº§å“ã€‚
+ *      °¸Àı2£ºÉú²úÕß&Ïû·ÑÕß
+ *      Éú²úÕß(Productor)½«²úÆ·½»¸øµêÔ±(Clerk)£¬¶øÏû·ÑÕß(Customer)´ÓµêÔ±´¦È¡×ß²úÆ·£¬µêÔ±Ò»´ÎÖ»ÄÜ³ÖÓĞ
+ *      ¹Ì¶¨ÊıÁ¿µÄ²úÆ·(±ÈÈç:20£©£¬Èç¹ûÉú²úÕßÊÔÍ¼Éú²ú¸ü¶àµÄ²úÆ·£¬µêÔ±»á½ĞÉú²úÕßÍ£Ò»ÏÂ£¬Èç¹ûµêÖĞÓĞ¿ÕÎ»·Å²úÆ·
+ *      ÁËÔÙÍ¨ÖªÉú²úÕß¼ÌĞøÉú²ú£»Èç¹ûµêÖĞÃ»ÓĞ²úÆ·ÁË£¬µêÔ±»á¸æËßÏû·ÑÕßµÈÒ»ÏÂ£¬Èç¹ûµêÖĞÓĞ²úÆ·ÁËÔÙÍ¨ÖªÏû·ÑÕßÀ´
+ *      È¡×ß²úÆ·¡£
  *
- *      åˆ†æï¼š
- *      1. æ˜¯å¦æ˜¯å¤šçº¿ç¨‹é—®é¢˜ï¼Ÿ æ˜¯ï¼Œç”Ÿäº§è€…ã€æ¶ˆè´¹è€…
- *      2. æ˜¯å¦æœ‰å…±äº«æ•°æ®ï¼Ÿæœ‰ï¼ å…±äº«æ•°æ®æ˜¯ï¼šäº§å“
- *      3. æ˜¯å¦æœ‰çº¿ç¨‹å®‰å…¨é—®é¢˜ï¼Ÿ æœ‰ï¼å› ä¸ºæœ‰å…±äº«æ•°æ®
- *      4. æ˜¯å¦éœ€è¦å¤„ç†çº¿ç¨‹å®‰å…¨é—®é¢˜ï¼Ÿæ˜¯ï¼ å¦‚ä½•å¤„ç†ï¼Ÿä½¿ç”¨åŒæ­¥æœºåˆ¶
- *      5. æ˜¯å¦å­˜åœ¨çº¿ç¨‹é—´çš„é€šä¿¡ï¼Ÿ å­˜åœ¨ã€‚
+ *      ·ÖÎö£º
+ *      1. ÊÇ·ñÊÇ¶àÏß³ÌÎÊÌâ£¿ ÊÇ£¬Éú²úÕß¡¢Ïû·ÑÕß
+ *      2. ÊÇ·ñÓĞ¹²ÏíÊı¾İ£¿ÓĞ£¡ ¹²ÏíÊı¾İÊÇ£º²úÆ·
+ *      3. ÊÇ·ñÓĞÏß³Ì°²È«ÎÊÌâ£¿ ÓĞ£¡ÒòÎªÓĞ¹²ÏíÊı¾İ
+ *      4. ÊÇ·ñĞèÒª´¦ÀíÏß³Ì°²È«ÎÊÌâ£¿ÊÇ£¡ ÈçºÎ´¦Àí£¿Ê¹ÓÃÍ¬²½»úÖÆ
+ *      5. ÊÇ·ñ´æÔÚÏß³Ì¼äµÄÍ¨ĞÅ£¿ ´æÔÚ¡£
  *
- * @Author å°šç¡…è°·-å®‹çº¢åº·
+ * @Author ÉĞ¹è¹È-ËÎºì¿µ
  * @Create 10:32
  * @Version 1.0
  */
 
-class Clerk{ //åº—å‘˜
+class Clerk{ //µêÔ±
 
-    private int productNum = 0;//äº§å“çš„æ•°é‡
+    private int productNum = 0;//²úÆ·µÄÊıÁ¿
 
-    //å¢åŠ äº§å“æ•°é‡çš„æ–¹æ³•
+    //Ôö¼Ó²úÆ·ÊıÁ¿µÄ·½·¨
     public synchronized void addProduct(){
 
         if(productNum >= 20){
-            //ç­‰å¾…
+            //µÈ´ı
             try {
                 wait();
             } catch (InterruptedException e) {
@@ -37,30 +37,30 @@ class Clerk{ //åº—å‘˜
             }
         }else{
             productNum++;
-            System.out.println(Thread.currentThread().getName() + "ç”Ÿäº§äº†ç¬¬" + productNum + "ä¸ªäº§å“");
+            System.out.println(Thread.currentThread().getName() + "Éú²úÁËµÚ" + productNum + "¸ö²úÆ·");
 
-            //å”¤é†’
+            //»½ĞÑ
             notifyAll();
         }
 
     }
 
-    //å‡å°‘äº§å“æ•°é‡çš„æ–¹æ³•
+    //¼õÉÙ²úÆ·ÊıÁ¿µÄ·½·¨
     public synchronized void minusProduct(){
 
         if(productNum <= 0){
 
-            //ç­‰å¾…
+            //µÈ´ı
             try {
                 wait();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }else{
-            System.out.println(Thread.currentThread().getName() + "æ¶ˆè´¹äº†ç¬¬" + productNum + "ä¸ªäº§å“");
+            System.out.println(Thread.currentThread().getName() + "Ïû·ÑÁËµÚ" + productNum + "¸ö²úÆ·");
             productNum--;
 
-            //å”¤é†’
+            //»½ĞÑ
             notifyAll();
         }
 
@@ -70,7 +70,7 @@ class Clerk{ //åº—å‘˜
 }
 
 
-class Producer extends Thread{  //ç”Ÿäº§è€…
+class Producer extends Thread{  //Éú²úÕß
 
     private Clerk clerk;
 
@@ -82,7 +82,7 @@ class Producer extends Thread{  //ç”Ÿäº§è€…
     public void run() {
 
         while(true){
-            System.out.println("ç”Ÿäº§è€…å¼€å§‹ç”Ÿäº§äº§å“...");
+            System.out.println("Éú²úÕß¿ªÊ¼Éú²ú²úÆ·...");
 
             try {
                 Thread.sleep(50);
@@ -96,7 +96,7 @@ class Producer extends Thread{  //ç”Ÿäº§è€…
 
     }
 }
-class Consumer extends Thread{ //æ¶ˆè´¹è€…
+class Consumer extends Thread{ //Ïû·ÑÕß
     private Clerk clerk;
 
     public Consumer(Clerk clerk){
@@ -106,7 +106,7 @@ class Consumer extends Thread{ //æ¶ˆè´¹è€…
     @Override
     public void run() {
         while(true){
-            System.out.println("æ¶ˆè´¹è€…å¼€å§‹æ¶ˆè´¹äº§å“...");
+            System.out.println("Ïû·ÑÕß¿ªÊ¼Ïû·Ñ²úÆ·...");
 
             try {
                 Thread.sleep(100);
@@ -130,9 +130,9 @@ public class ProducerConsumerTest {
         Consumer con1 = new Consumer(clerk);
         Consumer con2 = new Consumer(clerk);
 
-        pro1.setName("ç”Ÿäº§è€…1");
-        con1.setName("æ¶ˆè´¹è€…1");
-        con2.setName("æ¶ˆè´¹è€…2");
+        pro1.setName("Éú²úÕß1");
+        con1.setName("Ïû·ÑÕß1");
+        con2.setName("Ïû·ÑÕß2");
 
         pro1.start();
         con1.start();

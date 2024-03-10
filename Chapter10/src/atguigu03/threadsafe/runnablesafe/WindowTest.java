@@ -3,10 +3,10 @@ package atguigu03.threadsafe.runnablesafe;
 /**
  * ClassName: WindowTest
  * Description:
- * ä½¿ç”¨å®ç°Runnableæ¥å£çš„æ–¹å¼ï¼Œå®ç°å–ç¥¨ã€‚--->å­˜åœ¨çº¿ç¨‹å®‰å…¨é—®é¢˜çš„ã€‚
- * ä½¿ç”¨åŒæ­¥ä»£ç å—è§£å†³ä¸Šè¿°å–ç¥¨ä¸­çš„çº¿ç¨‹å®‰å…¨é—®é¢˜ã€‚
+ * Ê¹ÓÃÊµÏÖRunnable½Ó¿ÚµÄ·½Ê½£¬ÊµÏÖÂôÆ±¡£--->´æÔÚÏß³Ì°²È«ÎÊÌâµÄ¡£
+ * Ê¹ÓÃÍ¬²½´úÂë¿é½â¾öÉÏÊöÂôÆ±ÖĞµÄÏß³Ì°²È«ÎÊÌâ¡£
  *
- * @Author å°šç¡…è°·-å®‹çº¢åº·
+ * @Author ÉĞ¹è¹È-ËÎºì¿µ
  * @Create 15:19
  * @Version 1.0
  */
@@ -27,9 +27,9 @@ class SaleTicket implements Runnable {
                     e.printStackTrace();
                 }
 
-//            synchronized (obj){ //obj:æ˜¯å”¯ä¸€çš„ï¼Ÿyes
-//            synchronized (dog){ //dog:æ˜¯å”¯ä¸€çš„ï¼Ÿyes
-            synchronized (this){ //this:æ˜¯å”¯ä¸€çš„ï¼Ÿyesï¼Œå°±æ˜¯é¢˜ç›®ä¸­çš„s
+//            synchronized (obj){ //obj:ÊÇÎ¨Ò»µÄ£¿yes
+//            synchronized (dog){ //dog:ÊÇÎ¨Ò»µÄ£¿yes
+            synchronized (this){ //this:ÊÇÎ¨Ò»µÄ£¿yes£¬¾ÍÊÇÌâÄ¿ÖĞµÄs
 
                 if (ticket > 0) {
 
@@ -39,7 +39,7 @@ class SaleTicket implements Runnable {
                         e.printStackTrace();
                     }
 
-                    System.out.println(Thread.currentThread().getName() + "å”®ç¥¨ï¼Œç¥¨å·ä¸ºï¼š" + ticket);
+                    System.out.println(Thread.currentThread().getName() + "ÊÛÆ±£¬Æ±ºÅÎª£º" + ticket);
                     ticket--;
 
                 } else {
@@ -62,9 +62,9 @@ public class WindowTest {
         Thread t2 = new Thread(s);
         Thread t3 = new Thread(s);
 
-        t1.setName("çª—å£1");
-        t2.setName("çª—å£2");
-        t3.setName("çª—å£3");
+        t1.setName("´°¿Ú1");
+        t2.setName("´°¿Ú2");
+        t3.setName("´°¿Ú3");
 
         t1.start();
         t2.start();
