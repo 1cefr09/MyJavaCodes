@@ -10,7 +10,7 @@ import java.util.Random;
  * ClassName: OtherAPITest
  * Description:
  *
- * @Author å°šç¡…è°·-å®‹çº¢åº·
+ * @Author ÉĞ¹è¹È-ËÎºì¿µ
  * @Create 9:00
  * @Version 1.0
  */
@@ -18,48 +18,48 @@ public class OtherAPITest {
     @Test
     public void test1() {
         String javaVersion = System.getProperty("java.version");
-        System.out.println("javaçš„version:" + javaVersion);
+        System.out.println("javaµÄversion:" + javaVersion);
 
         String javaHome = System.getProperty("java.home");
-        System.out.println("javaçš„home:" + javaHome);
+        System.out.println("javaµÄhome:" + javaHome);
 
         String osName = System.getProperty("os.name");
-        System.out.println("osçš„name:" + osName);
+        System.out.println("osµÄname:" + osName);
 
         String osVersion = System.getProperty("os.version");
-        System.out.println("osçš„version:" + osVersion);
+        System.out.println("osµÄversion:" + osVersion);
 
         String userName = System.getProperty("user.name");
-        System.out.println("userçš„name:" + userName);
+        System.out.println("userµÄname:" + userName);
 
         String userHome = System.getProperty("user.home");
-        System.out.println("userçš„home:" + userHome);
+        System.out.println("userµÄhome:" + userHome);
 
         String userDir = System.getProperty("user.dir");
-        System.out.println("userçš„dir:" + userDir);
+        System.out.println("userµÄdir:" + userDir);
     }
 
     @Test
     public void test2() {
         Runtime runtime = Runtime.getRuntime();
-        long initialMemory = runtime.totalMemory(); //è·å–è™šæ‹Ÿæœºåˆå§‹åŒ–æ—¶å †å†…å­˜æ€»é‡
-        long maxMemory = runtime.maxMemory(); //è·å–è™šæ‹Ÿæœºæœ€å¤§å †å†…å­˜æ€»é‡
+        long initialMemory = runtime.totalMemory(); //»ñÈ¡ĞéÄâ»ú³õÊ¼»¯Ê±¶ÑÄÚ´æ×ÜÁ¿
+        long maxMemory = runtime.maxMemory(); //»ñÈ¡ĞéÄâ»ú×î´ó¶ÑÄÚ´æ×ÜÁ¿
         String str = "";
-        //æ¨¡æ‹Ÿå ç”¨å†…å­˜
+        //Ä£ÄâÕ¼ÓÃÄÚ´æ
         for (int i = 0; i < 10000; i++) {
             str += i;
         }
-        long freeMemory = runtime.freeMemory(); //è·å–ç©ºé—²å †å†…å­˜æ€»é‡
+        long freeMemory = runtime.freeMemory(); //»ñÈ¡¿ÕÏĞ¶ÑÄÚ´æ×ÜÁ¿
 
-        System.out.println("æ€»å†…å­˜ï¼š" + initialMemory / 1024 / 1024 * 64 + "MB");
-        System.out.println("æ€»å†…å­˜ï¼š" + maxMemory / 1024 / 1024 * 4 + "MB");
-        System.out.println("ç©ºé—²å†…å­˜ï¼š" + freeMemory / 1024 / 1024 + "MB") ;
-        System.out.println("å·²ç”¨å†…å­˜ï¼š" + (initialMemory-freeMemory) / 1024 / 1024 + "MB");
+        System.out.println("×ÜÄÚ´æ£º" + initialMemory / 1024 / 1024 * 64 + "MB");
+        System.out.println("×ÜÄÚ´æ£º" + maxMemory / 1024 / 1024 * 4 + "MB");
+        System.out.println("¿ÕÏĞÄÚ´æ£º" + freeMemory / 1024 / 1024 + "MB") ;
+        System.out.println("ÒÑÓÃÄÚ´æ£º" + (initialMemory-freeMemory) / 1024 / 1024 + "MB");
     }
 
     @Test
     public void test3(){
-        //æŠ€å·§ï¼šfloor(x + 0.5)
+        //¼¼ÇÉ£ºfloor(x + 0.5)
         System.out.println(Math.round(12.3));//12
         System.out.println(Math.round(12.5));//13
         System.out.println(Math.round(-12.3));//-12
@@ -74,13 +74,13 @@ public class OtherAPITest {
         BigInteger b1 = new BigInteger("12345678912345678912345678");
         BigInteger b2 = new BigInteger("78923456789123456789123456789");
 
-        //System.out.println("å’Œï¼š" + (b1+b2));//é”™è¯¯çš„ï¼Œæ— æ³•ç›´æ¥ä½¿ç”¨+è¿›è¡Œæ±‚å’Œ
+        //System.out.println("ºÍ£º" + (b1+b2));//´íÎóµÄ£¬ÎŞ·¨Ö±½ÓÊ¹ÓÃ+½øĞĞÇóºÍ
 
-        System.out.println("å’Œï¼š" + b1.add(b2));
-        System.out.println("å‡ï¼š" + b1.subtract(b2));
-        System.out.println("ä¹˜ï¼š" + b1.multiply(b2));
-        System.out.println("é™¤ï¼š" + b2.divide(b1));
-        System.out.println("ä½™ï¼š" + b2.remainder(b1));
+        System.out.println("ºÍ£º" + b1.add(b2));
+        System.out.println("¼õ£º" + b1.subtract(b2));
+        System.out.println("³Ë£º" + b1.multiply(b2));
+        System.out.println("³ı£º" + b2.divide(b1));
+        System.out.println("Óà£º" + b2.remainder(b1));
     }
 
     @Test
@@ -100,7 +100,7 @@ public class OtherAPITest {
         int i = random.nextInt();
         System.out.println(i);
 
-        int j = random.nextInt(10); //éšæœºè·å–[0,10)èŒƒå›´çš„æ•´æ•°
+        int j = random.nextInt(10); //Ëæ»ú»ñÈ¡[0,10)·¶Î§µÄÕûÊı
         System.out.println(j);
     }
 }

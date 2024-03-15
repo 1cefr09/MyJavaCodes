@@ -9,7 +9,7 @@ import java.util.Arrays;
  * ClassName: ComparableTest
  * Description:
  *
- * @Author å°šç¡…è°·-å®‹çº¢åº·
+ * @Author ÉĞ¹è¹È-ËÎºì¿µ
  * @Create 16:29
  * @Version 1.0
  */
@@ -21,7 +21,7 @@ public class ComparableTest {
 
         Arrays.sort(arr);
 
-        //æ’åºåï¼Œéå†
+        //ÅÅĞòºó£¬±éÀú
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
         }
@@ -38,7 +38,7 @@ public class ComparableTest {
         arr[4] = new Product("HonorMagic4",6299);
 
         Arrays.sort(arr);
-        //æ’åºåï¼Œéå†
+        //ÅÅĞòºó£¬±éÀú
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
         }
@@ -51,11 +51,11 @@ public class ComparableTest {
         Product p2 = new Product("VivoX90pro",5999);
         int comapre = p1.compareTo(p2);
         if(comapre > 0){
-            System.out.println("p1å¤§");
+            System.out.println("p1´ó");
         }else if(comapre < 0){
-            System.out.println("p2å¤§");
+            System.out.println("p2´ó");
         }else{
-            System.out.println("p1å’Œp2ä¸€æ ·å¤§");
+            System.out.println("p1ºÍp2Ò»Ñù´ó");
         }
 
     }

@@ -10,7 +10,7 @@ import org.junit.Test;
  * @Create 11:16
  * @Version 1.0
  */
-public class StringBufferBuilderTest {
+public class  StringBufferBuilderTest {
     /*
     *   （1）StringBuffer append(xx)：提供了很多的append()方法，用于进行字符串追加的方式拼接
         （2）StringBuffer delete(int start, int end)：删除[start,end)之间字符

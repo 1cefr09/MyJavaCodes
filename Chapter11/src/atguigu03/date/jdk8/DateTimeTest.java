@@ -12,24 +12,24 @@ import java.util.Date;
  * ClassName: DateTimeTest
  * Description:
  *
- * @Author å°šç¡…è°·-å®‹çº¢åº·
+ * @Author ÉÐ¹è¹È-ËÎºì¿µ
  * @Create 15:33
  * @Version 1.0
  */
 public class DateTimeTest {
     /*
-    * - å¯å˜æ€§ï¼šåƒæ—¥æœŸå’Œæ—¶é—´è¿™æ ·çš„ç±»åº”è¯¥æ˜¯ä¸å¯å˜çš„ã€‚
-     - åç§»æ€§ï¼šDateä¸­çš„å¹´ä»½æ˜¯ä»Ž1900å¼€å§‹çš„ï¼Œè€Œæœˆä»½éƒ½ä»Ž0å¼€å§‹ã€‚
-     - æ ¼å¼åŒ–ï¼šæ ¼å¼åŒ–åªå¯¹Dateæœ‰ç”¨ï¼ŒCalendaråˆ™ä¸è¡Œã€‚
-     - æ­¤å¤–ï¼Œå®ƒä»¬ä¹Ÿä¸æ˜¯çº¿ç¨‹å®‰å…¨çš„ï¼›ä¸èƒ½å¤„ç†é—°ç§’ç­‰ã€‚
+    * - ¿É±äÐÔ£ºÏñÈÕÆÚºÍÊ±¼äÕâÑùµÄÀàÓ¦¸ÃÊÇ²»¿É±äµÄ¡£
+     - Æ«ÒÆÐÔ£ºDateÖÐµÄÄê·ÝÊÇ´Ó1900¿ªÊ¼µÄ£¬¶øÔÂ·Ý¶¼´Ó0¿ªÊ¼¡£
+     - ¸ñÊ½»¯£º¸ñÊ½»¯Ö»¶ÔDateÓÐÓÃ£¬CalendarÔò²»ÐÐ¡£
+     - ´ËÍâ£¬ËüÃÇÒ²²»ÊÇÏß³Ì°²È«µÄ£»²»ÄÜ´¦ÀíÈòÃëµÈ¡£
     *
     * */
     @Test
     public void test1(){
         String s1 = "hello";
-        String s2 = s1.replace('l', 'w'); //Stringçš„ä¸å¯å˜æ€§
+        String s2 = s1.replace('l', 'w'); //StringµÄ²»¿É±äÐÔ
         System.out.println(s1);//hello
-        //ä½“ä¼šCalendarçš„å¯å˜æ€§
+        //Ìå»áCalendarµÄ¿É±äÐÔ
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.DAY_OF_MONTH,23);
         System.out.println(calendar.get(Calendar.DAY_OF_MONTH));
@@ -37,17 +37,17 @@ public class DateTimeTest {
 
     @Test
     public void test2(){
-        //åç§»æ€§ï¼šDateä¸­çš„å¹´ä»½æ˜¯ä»Ž1900å¼€å§‹çš„ï¼Œè€Œæœˆä»½éƒ½ä»Ž0å¼€å§‹ã€‚
+        //Æ«ÒÆÐÔ£ºDateÖÐµÄÄê·ÝÊÇ´Ó1900¿ªÊ¼µÄ£¬¶øÔÂ·Ý¶¼´Ó0¿ªÊ¼¡£
         Date date = new Date(2022,11,14);
         System.out.println(date);
     }
 
     /*
-    * JDK8çš„api:LocalDate \ LocalTime \ LocalDateTime
+    * JDK8µÄapi:LocalDate \ LocalTime \ LocalDateTime
     * */
     @Test
     public void test3(){
-        //now():èŽ·å–å½“å‰æ—¥æœŸå’Œæ—¶é—´å¯¹åº”çš„å®žä¾‹
+        //now():»ñÈ¡µ±Ç°ÈÕÆÚºÍÊ±¼ä¶ÔÓ¦µÄÊµÀý
         LocalDate localDate = LocalDate.now();
         LocalTime localTime = LocalTime.now();
         LocalDateTime localDateTime = LocalDateTime.now();
@@ -56,7 +56,7 @@ public class DateTimeTest {
         System.out.println(localTime);//15:43:51.474
         System.out.println(localDateTime); //2022-12-05T15:43:51.475
 
-        //of():èŽ·å–æŒ‡å®šçš„æ—¥æœŸã€æ—¶é—´å¯¹åº”çš„å®žä¾‹
+        //of():»ñÈ¡Ö¸¶¨µÄÈÕÆÚ¡¢Ê±¼ä¶ÔÓ¦µÄÊµÀý
         LocalDate localDate1 = LocalDate.of(2021, 5, 23);
         LocalDateTime localDateTime1 = LocalDateTime.of(2022, 12, 5, 11, 23, 45);
         System.out.println(localDate1);
@@ -65,7 +65,7 @@ public class DateTimeTest {
         //getXXX()
         LocalDateTime localDateTime2 = LocalDateTime.now();
         System.out.println(localDateTime2.getDayOfMonth());
-        //ä½“çŽ°ä¸å¯å˜æ€§
+        //ÌåÏÖ²»¿É±äÐÔ
         //withXxx()
         LocalDateTime localDateTime3 = localDateTime2.withDayOfMonth(15);
         System.out.println(localDateTime2);//2022-12-05T15:48:48.399
@@ -78,14 +78,14 @@ public class DateTimeTest {
     }
 
     /*
-    * JDK8çš„api: Instant
+    * JDK8µÄapi: Instant
     * */
     @Test
     public void test4(){
         //now():
         Instant instant = Instant.now();
         System.out.println(instant);//2022-12-05T07:56:27.327Z
-        //äº†è§£ï¼š
+        //ÁË½â£º
         OffsetDateTime instant1 = instant.atOffset(ZoneOffset.ofHours(8));
         System.out.println(instant1);
 
@@ -99,19 +99,19 @@ public class DateTimeTest {
     }
 
     /*
-    * JDK8çš„api: DateTimeFormatter
+    * JDK8µÄapi: DateTimeFormatter
     * */
     @Test
     public void test5(){
-        //è‡ªå®šä¹‰çš„æ ¼å¼ã€‚å¦‚ï¼šofPattern(â€œyyyy-MM-dd hh:mm:ssâ€)
+        //×Ô¶¨ÒåµÄ¸ñÊ½¡£Èç£ºofPattern(¡°yyyy-MM-dd hh:mm:ss¡±)
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 
-        //æ ¼å¼åŒ–ï¼šæ—¥æœŸã€æ—¶é—´-->å­—ç¬¦ä¸²
+        //¸ñÊ½»¯£ºÈÕÆÚ¡¢Ê±¼ä-->×Ö·û´®
         LocalDateTime localDateTime = LocalDateTime.now();
         String strDateTime = dateTimeFormatter.format(localDateTime);
         System.out.println(strDateTime);//2022/12/05 16:04:44
 
-        //è§£æžï¼šå­—ç¬¦ä¸² ---> æ—¥æœŸã€æ—¶é—´
+        //½âÎö£º×Ö·û´® ---> ÈÕÆÚ¡¢Ê±¼ä
         TemporalAccessor temporalAccessor = dateTimeFormatter.parse("2022/12/05 15:04:44");
         LocalDateTime localDateTime1 = LocalDateTime.from(temporalAccessor);
         System.out.println(localDateTime1);//2022-12-05T15:04:44

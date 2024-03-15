@@ -11,56 +11,56 @@ import java.util.Date;
  * ClassName: DateTimeTest
  * Description:
  *
- * @Author å°šç¡…è°·-å®‹çº¢åº·
+ * @Author ÉĞ¹è¹È-ËÎºì¿µ
  * @Create 11:47
  * @Version 1.0
  */
 public class DateTimeTest {
     /*
-    * Dateç±»çš„ä½¿ç”¨
+    * DateÀàµÄÊ¹ÓÃ
     *
     * |--java.util.Date
-    *   > ä¸¤ä¸ªæ„é€ å™¨çš„ä½¿ç”¨
-    *   > ä¸¤ä¸ªæ–¹æ³•çš„ä½¿ç”¨ï¼šâ‘ toString() â‘¡ long getTime()
-    *       |----java.sql.Date: å¯¹åº”ç€æ•°æ®åº“ä¸­çš„dateç±»å‹
+    *   > Á½¸ö¹¹ÔìÆ÷µÄÊ¹ÓÃ
+    *   > Á½¸ö·½·¨µÄÊ¹ÓÃ£º¢ÙtoString() ¢Ú long getTime()
+    *       |----java.sql.Date: ¶ÔÓ¦×ÅÊı¾İ¿âÖĞµÄdateÀàĞÍ
     *
     * */
     @Test
     public void test1(){
-        Date date1 = new Date(); //åˆ›å»ºä¸€ä¸ªåŸºäºå½“å‰ç³»ç»Ÿæ—¶é—´çš„Dateçš„å®ä¾‹
+        Date date1 = new Date(); //´´½¨Ò»¸ö»ùÓÚµ±Ç°ÏµÍ³Ê±¼äµÄDateµÄÊµÀı
         System.out.println(date1.toString());//Mon Dec 05 11:56:26 CST 2022
 
         long milliTimes = date1.getTime();
-        System.out.println("å¯¹åº”çš„æ¯«ç§’æ•°ä¸ºï¼š" + milliTimes); //1670212256045
+        System.out.println("¶ÔÓ¦µÄºÁÃëÊıÎª£º" + milliTimes); //1670212256045
 
-        Date date2 = new Date(1370202256045L); //åˆ›å»ºä¸€ä¸ªåŸºäºæŒ‡å®šæ—¶é—´æˆ³çš„Dateçš„å®ä¾‹
+        Date date2 = new Date(1710243114465L); //´´½¨Ò»¸ö»ùÓÚÖ¸¶¨Ê±¼ä´ÁµÄDateµÄÊµÀı
         System.out.println(date2.toString());
     }
     @Test
     public void test2(){
-        java.sql.Date date1 = new java.sql.Date(1370202256045L);
+        java.sql.Date date1 = new java.sql.Date(1710243114465L);
         System.out.println(date1.toString());//2013-06-03
 
         System.out.println(date1.getTime());//1370202256045
     }
 
     /*
-    * SimpleDateFormatç±»ï¼šç”¨äºæ—¥æœŸæ—¶é—´çš„æ ¼å¼åŒ–å’Œè§£æ
+    * SimpleDateFormatÀà£ºÓÃÓÚÈÕÆÚÊ±¼äµÄ¸ñÊ½»¯ºÍ½âÎö
     *
-    * æ ¼å¼åŒ–ï¼šæ—¥æœŸ--->å­—ç¬¦ä¸²
-    * è§£æï¼šå­—ç¬¦ä¸² ---> æ—¥æœŸ
+    * ¸ñÊ½»¯£ºÈÕÆÚ--->×Ö·û´®
+    * ½âÎö£º×Ö·û´® ---> ÈÕÆÚ
     *
     * */
     @Test
     public void test3() throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat();
-        //æ ¼å¼åŒ–ï¼šæ—¥æœŸ--->å­—ç¬¦ä¸²
+        //¸ñÊ½»¯£ºÈÕÆÚ--->×Ö·û´®
         Date date1 = new Date();
         String strDate = sdf.format(date1);
-        System.out.println(strDate);//22-12-5 ä¸‹åˆ2:21
+        System.out.println(strDate);//2024/3/12 ÏÂÎç7:37
 
-        //è§£æï¼šå­—ç¬¦ä¸² ---> æ—¥æœŸ
-        Date date2 = sdf.parse("22-12-5 ä¸‹åˆ3:21");
+        //½âÎö£º×Ö·û´® ---> ÈÕÆÚ
+        Date date2 = sdf.parse("2024/3/12 ÏÂÎç7:37");
         System.out.println(date2);
     }
 
@@ -68,26 +68,26 @@ public class DateTimeTest {
     public void test4() throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss Z");
         sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        //æ ¼å¼åŒ–ï¼šæ—¥æœŸ--->å­—ç¬¦ä¸²
+        //¸ñÊ½»¯£ºÈÕÆÚ--->×Ö·û´®
         Date date1 = new Date();
         String strDate = sdf.format(date1);
         System.out.println(strDate);//2022-12-05 14:27:19
 
-        //è§£æï¼šå­—ç¬¦ä¸² ---> æ—¥æœŸ
+        //½âÎö£º×Ö·û´® ---> ÈÕÆÚ
         Date date2 = sdf.parse("2022-12-05 14:27:19");
         System.out.println(date2);
 
-        //è§£æå¤±è´¥ã€‚å› ä¸ºå‚æ•°çš„å­—ç¬¦ä¸²ä¸æ»¡è¶³SimpleDateFormatå¯ä»¥è¯†åˆ«çš„æ ¼å¼ã€‚
-//        Date date3 = sdf.parse("22-12-5 ä¸‹åˆ2:21");
+        //½âÎöÊ§°Ü¡£ÒòÎª²ÎÊıµÄ×Ö·û´®²»Âú×ãSimpleDateFormat¿ÉÒÔÊ¶±ğµÄ¸ñÊ½¡£
+//        Date date3 = sdf.parse("22-12-5 ÏÂÎç2:21");
 //        System.out.println(date2);
     }
 
     /*
-    * Calendar:æ—¥å†ç±»
-    * â‘  å®ä¾‹åŒ– ç”±äºCalendaræ˜¯ä¸€ä¸ªæŠ½è±¡ç±»ï¼Œæ‰€ä»¥æˆ‘ä»¬éœ€è¦åˆ›å»ºå…¶å­ç±»çš„å®ä¾‹ã€‚è¿™é‡Œæˆ‘ä»¬é€šè¿‡Calendarçš„é™æ€æ–¹æ³•
-    *          getInstance()å³å¯è·å–
+    * Calendar:ÈÕÀúÀà
+    * ¢Ù ÊµÀı»¯ ÓÉÓÚCalendarÊÇÒ»¸ö³éÏóÀà£¬ËùÒÔÎÒÃÇĞèÒª´´½¨Æä×ÓÀàµÄÊµÀı¡£ÕâÀïÎÒÃÇÍ¨¹ıCalendarµÄ¾²Ì¬·½·¨
+    *          getInstance()¼´¿É»ñÈ¡
     *
-    * â‘¡å¸¸ç”¨æ–¹æ³•ï¼šget(int field) / set(int field,xx) / add(int field,xx) / getTime() / setTime()
+    * ¢Ú³£ÓÃ·½·¨£ºget(int field) / set(int field,xx) / add(int field,xx) / getTime() / setTime()
     * */
 
     @Test
@@ -96,7 +96,7 @@ public class DateTimeTest {
 
 //        System.out.println(calendar.getClass());
 
-        //æµ‹è¯•æ–¹æ³•
+        //²âÊÔ·½·¨
         //get(int field)
         System.out.println(calendar.get(Calendar.DAY_OF_MONTH));
         System.out.println(calendar.get(Calendar.DAY_OF_YEAR));
@@ -114,7 +114,7 @@ public class DateTimeTest {
         Date date = calendar.getTime();
         System.out.println(date);
 
-        //setTime():ä½¿ç”¨æŒ‡å®šDateé‡ç½®Calendar
+        //setTime():Ê¹ÓÃÖ¸¶¨DateÖØÖÃCalendar
         Date date1 = new Date();
         calendar.setTime(date1);
         System.out.println(calendar.get(Calendar.DAY_OF_MONTH));

@@ -10,7 +10,7 @@ import java.util.Comparator;
  * ClassName: ComparatorTest
  * Description:
  *
- * @Author å°šç¡…è°·-å®‹çº¢åº·
+ * @Author ÉĞ¹è¹È-ËÎºì¿µ
  * @Create 16:57
  * @Version 1.0
  */
@@ -25,11 +25,11 @@ public class ComparatorTest {
         arr[3] = new Product("Iphone14ProMax",9999);
         arr[4] = new Product("HonorMagic4",6299);
 
-        //åˆ›å»ºä¸€ä¸ªå®ç°äº†Comparatoræ¥å£çš„å®ç°ç±»çš„å¯¹è±¡
+        //´´½¨Ò»¸öÊµÏÖÁËComparator½Ó¿ÚµÄÊµÏÖÀàµÄ¶ÔÏó
         Comparator comparator = new Comparator(){
 
-            //å¦‚æœåˆ¤æ–­ä¸¤ä¸ªå¯¹è±¡o1,o2çš„å¤§å°ï¼Œå…¶æ ‡å‡†å°±æ˜¯æ­¤æ–¹æ³•çš„æ–¹æ³•ä½“è¦ç¼–å†™çš„é€»è¾‘ã€‚
-            //æ¯”å¦‚ï¼šæŒ‰ç…§ä»·æ ¼ä»é«˜åˆ°ä½æ’åº
+            //ÈçºÎÅĞ¶ÏÁ½¸ö¶ÔÏóo1,o2µÄ´óĞ¡£¬Æä±ê×¼¾ÍÊÇ´Ë·½·¨µÄ·½·¨ÌåÒª±àĞ´µÄÂß¼­¡£
+            //±ÈÈç£º°´ÕÕ¼Û¸ñ´Ó¸ßµ½µÍÅÅĞò
             @Override
             public int compare(Object o1, Object o2) {
                 if(o1 instanceof Product && o2 instanceof Product){
@@ -41,7 +41,7 @@ public class ComparatorTest {
 
                 }
 
-                throw new RuntimeException("ç±»å‹ä¸åŒ¹é…");
+                throw new RuntimeException("ÀàĞÍ²»Æ¥Åä");
 
             }
         };
@@ -49,8 +49,8 @@ public class ComparatorTest {
 
         Comparator comparator1 = new Comparator(){
 
-            //å¦‚æœåˆ¤æ–­ä¸¤ä¸ªå¯¹è±¡o1,o2çš„å¤§å°ï¼Œå…¶æ ‡å‡†å°±æ˜¯æ­¤æ–¹æ³•çš„æ–¹æ³•ä½“è¦ç¼–å†™çš„é€»è¾‘ã€‚
-            //æ¯”å¦‚ï¼šæŒ‰ç…§nameä»ä½åˆ°é«˜æ’åº
+            //Èç¹ûÅĞ¶ÏÁ½¸ö¶ÔÏóo1,o2µÄ´óĞ¡£¬Æä±ê×¼¾ÍÊÇ´Ë·½·¨µÄ·½·¨ÌåÒª±àĞ´µÄÂß¼­¡£
+            //±ÈÈç£º°´ÕÕname´ÓµÍµ½¸ßÅÅĞò
             @Override
             public int compare(Object o1, Object o2) {
                 if(o1 instanceof Product && o2 instanceof Product){
@@ -61,7 +61,7 @@ public class ComparatorTest {
                     return p1.getName().compareTo(p2.getName());
                 }
 
-                throw new RuntimeException("ç±»å‹ä¸åŒ¹é…");
+                throw new RuntimeException("ÀàĞÍ²»Æ¥Åä");
 
             }
         };
@@ -69,7 +69,7 @@ public class ComparatorTest {
         Arrays.sort(arr,comparator1);
 
 
-        //æ’åºåï¼Œéå†
+        //ÅÅĞòºó£¬±éÀú
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
         }
@@ -91,11 +91,11 @@ public class ComparatorTest {
 
                     return -s1.compareTo(s2);
                 }
-                throw new RuntimeException("ç±»å‹ä¸åŒ¹é…");
+                throw new RuntimeException("ÀàĞÍ²»Æ¥Åä");
             }
         });
 
-        //æ’åºåï¼Œéå†
+        //ÅÅĞòºó£¬±éÀú
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
         }
