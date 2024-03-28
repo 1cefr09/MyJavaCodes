@@ -23,6 +23,8 @@
     <file url="file://$PROJECT_DIR$/Chapter11/src/atguigu04/compare/comparable/ComparableTest.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Chapter11/src/atguigu04/compare/comparator/ComparatorTest.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Chapter11/src/atguigu05/other/OtherAPITest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Chapter12/src/atguigu01/collection/CollectionTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Chapter12/src/atguigu02/iterator/IteratorTest.java" charset="GBK" />
     <file url="PROJECT" charset="GBK" />
   </component>
 </project>

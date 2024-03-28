@@ -1,6 +1,6 @@
 package atguigu02.iterator;
 
-import com.atguigu01.collection.Person;
+import atguigu01.collection.Person;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ import java.util.Iterator;
  * ClassName: IteratorTest
  * Description:
  *
- * @Author å°šç¡…è°·-å®‹çº¢åº·
+ * @Author ÉĞ¹è¹È-ËÎºì¿µ
  * @Create 14:10
  * @Version 1.0
  */
@@ -24,28 +24,28 @@ public class IteratorTest {
         coll.add("AA");
         Person p1 = new Person("Tom",12);
         coll.add(p1);
-        coll.add(128);//è‡ªåŠ¨è£…ç®±
-        coll.add(new String("å°šç¡…è°·"));
+        coll.add(128);//×Ô¶¯×°Ïä
+        coll.add(new String("ÉĞ¹è¹È"));
 
-        //è·å–è¿­ä»£å™¨å¯¹è±¡
+        //»ñÈ¡µü´úÆ÷¶ÔÏó
         Iterator iterator = coll.iterator();
 //        System.out.println(iterator.getClass());
 
-        //æ–¹å¼1ï¼š
+        //·½Ê½1£º
 //        System.out.println(iterator.next());
 //        System.out.println(iterator.next());
 //        System.out.println(iterator.next());
 //        System.out.println(iterator.next());
 //        System.out.println(iterator.next());
 
-//        System.out.println(iterator.next());//å¦‚æœè¶…å‡ºäº†é›†åˆä¸­å…ƒç´ çš„ä¸ªæ•°ï¼Œä¼šæŠ¥NoSuchElementExceptionå¼‚å¸¸
+//        System.out.println(iterator.next());//Èç¹û³¬³öÁË¼¯ºÏÖĞÔªËØµÄ¸öÊı£¬»á±¨NoSuchElementExceptionÒì³£
 
-        //æ–¹å¼2ï¼š
+        //·½Ê½2£º
 //        for(int i = 0;i < coll.size();i++){
 //            System.out.println(iterator.next());
 //        }
 
-        //æ–¹å¼3ï¼šæ¨è
+        //·½Ê½3£ºÍÆ¼ö
         while(iterator.hasNext()){
             System.out.println(iterator.next());
         }
@@ -59,18 +59,18 @@ public class IteratorTest {
         coll.add("BB");
         Person p1 = new Person("Tom",12);
         coll.add(p1);
-        coll.add(128);//è‡ªåŠ¨è£…ç®±
-        coll.add(new String("å°šç¡…è°·"));
+        coll.add(128);//×Ô¶¯×°Ïä
+        coll.add(new String("ÉĞ¹è¹È"));
 
-        //æ–¹å¼1ï¼šé”™è¯¯çš„éå†
+        //·½Ê½1£º´íÎóµÄ±éÀú
 //        Iterator iterator = coll.iterator();
 //
 //        while((iterator.next()) != null){
 //            System.out.println(iterator.next());
 //        }
 
-        //æ–¹å¼2ï¼šé”™è¯¯çš„éå†
-        //æ¯æ¬¡è°ƒç”¨coll.iterator()ï¼Œéƒ½ä¼šè¿”å›ä¸€ä¸ªæ–°çš„è¿­ä»£å™¨å¯¹è±¡ã€‚
+        //·½Ê½2£º´íÎóµÄ±éÀú
+        //Ã¿´Îµ÷ÓÃcoll.iterator()£¬¶¼»á·µ»ØÒ»¸öĞÂµÄµü´úÆ÷¶ÔÏó¡£
         while(coll.iterator().hasNext()){
             System.out.println(coll.iterator().next());
         }

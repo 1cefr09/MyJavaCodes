@@ -10,16 +10,16 @@ import java.util.List;
 /**
  * ClassName: CollectionTest
  * Description:
- *      æµ‹è¯•Collectionä¸­æ–¹æ³•çš„ä½¿ç”¨
+ *      ²âÊÔCollectionÖĞ·½·¨µÄÊ¹ÓÃ
  *
- * @Author å°šç¡…è°·-å®‹çº¢åº·
+ * @Author ÉĞ¹è¹È-ËÎºì¿µ
  * @Create 11:23
  * @Version 1.0
  */
 public class CollectionTest {
     /*
-    *   ï¼ˆ1ï¼‰add(Object obj)ï¼šæ·»åŠ å…ƒç´ å¯¹è±¡åˆ°å½“å‰é›†åˆä¸­
-        ï¼ˆ2ï¼‰addAll(Collection other)ï¼šæ·»åŠ otheré›†åˆä¸­çš„æ‰€æœ‰å…ƒç´ å¯¹è±¡åˆ°å½“å‰é›†åˆä¸­ï¼Œå³this = this âˆª other
+    *   £¨1£©add(Object obj)£ºÌí¼ÓÔªËØ¶ÔÏóµ½µ±Ç°¼¯ºÏÖĞ
+        £¨2£©addAll(Collection other)£ºÌí¼Óother¼¯ºÏÖĞµÄËùÓĞÔªËØ¶ÔÏóµ½µ±Ç°¼¯ºÏÖĞ£¬¼´this = this ¡È other
     * */
     @Test
     public void test(){
@@ -27,8 +27,8 @@ public class CollectionTest {
 
         //add()
         coll.add("AA");
-        coll.add(123);//è‡ªåŠ¨è£…ç®±
-        coll.add("å°šç¡…è°·");
+        coll.add(123);//×Ô¶¯×°Ïä
+        coll.add("ÉĞ¹è¹È");
         coll.add(new Object());
         coll.add(new Person("Tom",12));
 
@@ -54,11 +54,11 @@ public class CollectionTest {
     }
 
     /*
-    *  ï¼ˆ3ï¼‰int size()ï¼šè·å–å½“å‰é›†åˆä¸­å®é™…å­˜å‚¨çš„å…ƒç´ ä¸ªæ•°
-        ï¼ˆ4ï¼‰boolean isEmpty()ï¼šåˆ¤æ–­å½“å‰é›†åˆæ˜¯å¦ä¸ºç©ºé›†åˆ
-        ï¼ˆ5ï¼‰boolean contains(Object obj)ï¼šåˆ¤æ–­å½“å‰é›†åˆä¸­æ˜¯å¦å­˜åœ¨ä¸€ä¸ªä¸objå¯¹è±¡equalsè¿”å›trueçš„å…ƒç´ 
-        ï¼ˆ6ï¼‰boolean containsAll(Collection coll)ï¼šåˆ¤æ–­collé›†åˆä¸­çš„å…ƒç´ æ˜¯å¦åœ¨å½“å‰é›†åˆä¸­éƒ½å­˜åœ¨ã€‚å³collé›†åˆæ˜¯å¦æ˜¯å½“å‰é›†åˆçš„â€œå­é›†â€
-        ï¼ˆ7ï¼‰boolean equals(Object obj)ï¼šåˆ¤æ–­å½“å‰é›†åˆä¸objæ˜¯å¦ç›¸ç­‰
+    *  £¨3£©int size()£º»ñÈ¡µ±Ç°¼¯ºÏÖĞÊµ¼Ê´æ´¢µÄÔªËØ¸öÊı
+        £¨4£©boolean isEmpty()£ºÅĞ¶Ïµ±Ç°¼¯ºÏÊÇ·ñÎª¿Õ¼¯ºÏ
+        £¨5£©boolean contains(Object obj)£ºÅĞ¶Ïµ±Ç°¼¯ºÏÖĞÊÇ·ñ´æÔÚÒ»¸öÓëobj¶ÔÏóequals·µ»ØtrueµÄÔªËØ
+        £¨6£©boolean containsAll(Collection coll)£ºÅĞ¶Ïcoll¼¯ºÏÖĞµÄÔªËØÊÇ·ñÔÚµ±Ç°¼¯ºÏÖĞ¶¼´æÔÚ¡£¼´coll¼¯ºÏÊÇ·ñÊÇµ±Ç°¼¯ºÏµÄ¡°×Ó¼¯¡±
+        £¨7£©boolean equals(Object obj)£ºÅĞ¶Ïµ±Ç°¼¯ºÏÓëobjÊÇ·ñÏàµÈ
     * */
 
     @Test
@@ -69,8 +69,8 @@ public class CollectionTest {
         coll.add("AA");
         Person p1 = new Person("Tom",12);
         coll.add(p1);
-        coll.add(128);//è‡ªåŠ¨è£…ç®±
-        coll.add(new String("å°šç¡…è°·"));
+        coll.add(128);//×Ô¶¯×°Ïä
+        coll.add(new String("ÉĞ¹è¹È"));
 
         //isEmpty()
         System.out.println(coll.isEmpty());
@@ -78,7 +78,7 @@ public class CollectionTest {
         //contains(Object obj)
         System.out.println(coll.contains("AA"));//true
         System.out.println(coll.contains(128));//true
-        System.out.println(coll.contains(new String("å°šç¡…è°·")));//true
+        System.out.println(coll.contains(new String("ÉĞ¹è¹È")));//true
         System.out.println(coll.contains(new Person("Tom",12)));//false-->true
 
         //containsAll(Collection coll)
@@ -93,10 +93,10 @@ public class CollectionTest {
     }
 
     /*
-    *   ï¼ˆ8ï¼‰void clear()ï¼šæ¸…ç©ºé›†åˆå…ƒç´ 
-        ï¼ˆ9ï¼‰ boolean remove(Object obj) ï¼šä»å½“å‰é›†åˆä¸­åˆ é™¤ç¬¬ä¸€ä¸ªæ‰¾åˆ°çš„ä¸objå¯¹è±¡equalsè¿”å›trueçš„å…ƒç´ ã€‚
-        ï¼ˆ10ï¼‰boolean removeAll(Collection coll)ï¼šä»å½“å‰é›†åˆä¸­åˆ é™¤æ‰€æœ‰ä¸collé›†åˆä¸­ç›¸åŒçš„å…ƒç´ ã€‚å³this = this - this âˆ© coll
-        ï¼ˆ11ï¼‰boolean retainAll(Collection coll)ï¼šä»å½“å‰é›†åˆä¸­åˆ é™¤ä¸¤ä¸ªé›†åˆä¸­ä¸åŒçš„å…ƒç´ ï¼Œä½¿å¾—å½“å‰é›†åˆä»…ä¿ç•™ä¸collé›†åˆä¸­çš„å…ƒç´ ç›¸åŒçš„å…ƒç´ ï¼Œå³å½“å‰é›†åˆä¸­ä»…ä¿ç•™ä¸¤ä¸ªé›†åˆçš„äº¤é›†ï¼Œå³this  = this âˆ© collï¼›
+    *   £¨8£©void clear()£ºÇå¿Õ¼¯ºÏÔªËØ
+        £¨9£© boolean remove(Object obj) £º´Óµ±Ç°¼¯ºÏÖĞÉ¾³ıµÚÒ»¸öÕÒµ½µÄÓëobj¶ÔÏóequals·µ»ØtrueµÄÔªËØ¡£
+        £¨10£©boolean removeAll(Collection coll)£º´Óµ±Ç°¼¯ºÏÖĞÉ¾³ıËùÓĞÓëcoll¼¯ºÏÖĞÏàÍ¬µÄÔªËØ¡£¼´this = this - this ¡É coll
+        £¨11£©boolean retainAll(Collection coll)£º´Óµ±Ç°¼¯ºÏÖĞÉ¾³ıÁ½¸ö¼¯ºÏÖĞ²»Í¬µÄÔªËØ£¬Ê¹µÃµ±Ç°¼¯ºÏ½ö±£ÁôÓëcoll¼¯ºÏÖĞµÄÔªËØÏàÍ¬µÄÔªËØ£¬¼´µ±Ç°¼¯ºÏÖĞ½ö±£ÁôÁ½¸ö¼¯ºÏµÄ½»¼¯£¬¼´this  = this ¡É coll£»
     *
     * */
     @Test
@@ -107,8 +107,8 @@ public class CollectionTest {
         coll.add("AA");
         Person p1 = new Person("Tom",12);
         coll.add(p1);
-        coll.add(128);//è‡ªåŠ¨è£…ç®±
-        coll.add(new String("å°šç¡…è°·"));
+        coll.add(128);//×Ô¶¯×°Ïä
+        coll.add(new String("ÉĞ¹è¹È"));
         System.out.println(coll);
 //        coll.clear();
 //        System.out.println(coll);
@@ -123,22 +123,22 @@ public class CollectionTest {
     }
 
     /*
-    *  ï¼ˆ12ï¼‰Object[] toArray()ï¼šè¿”å›åŒ…å«å½“å‰é›†åˆä¸­æ‰€æœ‰å…ƒç´ çš„æ•°ç»„
-        ï¼ˆ13ï¼‰hashCode()ï¼šè·å–é›†åˆå¯¹è±¡çš„å“ˆå¸Œå€¼
-        ï¼ˆ14ï¼‰iterator()ï¼šè¿”å›è¿­ä»£å™¨å¯¹è±¡ï¼Œç”¨äºé›†åˆéå†
+    *  £¨12£©Object[] toArray()£º·µ»Ø°üº¬µ±Ç°¼¯ºÏÖĞËùÓĞÔªËØµÄÊı×é
+        £¨13£©hashCode()£º»ñÈ¡¼¯ºÏ¶ÔÏóµÄ¹şÏ£Öµ
+        £¨14£©iterator()£º·µ»Øµü´úÆ÷¶ÔÏó£¬ÓÃÓÚ¼¯ºÏ±éÀú
     * */
     @Test
     public void test4(){
-        Collection coll = new ArrayList();
+        Collection coll = new ArrayList<>();
 
         coll.add("AA");
         coll.add("AA");
         Person p1 = new Person("Tom",12);
         coll.add(p1);
-        coll.add(128);//è‡ªåŠ¨è£…ç®±
-        coll.add(new String("å°šç¡…è°·"));
+        coll.add(128);//×Ô¶¯×°Ïä
+        coll.add(new String("ÉĞ¹è¹È"));
 
-        //é›†åˆ ---> æ•°ç»„
+        //¼¯ºÏ ---> Êı×é
         Object[] arr = coll.toArray();
         System.out.println(Arrays.toString(arr));
 
@@ -169,6 +169,12 @@ public class CollectionTest {
         List list1 = Arrays.asList(arr1);
         System.out.println(list1.size());//1
         System.out.println(list1);
+
+    }
+
+    @Test
+    public void test7() {
+        Collection coll = new ArrayList();
 
     }
 }

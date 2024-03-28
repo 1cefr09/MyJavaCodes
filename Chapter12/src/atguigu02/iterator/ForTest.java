@@ -1,6 +1,6 @@
 package atguigu02.iterator;
 
-import com.atguigu01.collection.Person;
+import atguigu01.collection.Person;
 import org.junit.Test;
 
 import java.util.ArrayList;
